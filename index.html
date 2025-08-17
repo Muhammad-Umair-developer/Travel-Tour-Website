@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wanderlust Tours - Explore the World</title>
+    <meta
+      name="description"
+      content="Discover amazing destinations and book your dream vacation with Wanderlust Tours. Explore exotic locations, adventure tours, and cultural experiences worldwide."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <h2>Wanderlust Tours</h2>
+          </div>
+          <div class="nav-menu">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#destinations" class="nav-link">Destinations</a>
+            <a href="#tours" class="nav-link">Tours</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+          <div class="nav-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="hero"
+        style="
+          position: relative;
+          min-height: 100vh;
+          padding: 96px 24px;
+          color: #fff;
+
+          /* Fixed background */
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.45),
+              rgba(0, 0, 0, 0.45)
+            ),
+            url('./public/images/beautiful.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+
+          /* Layout */
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        "
+      >
+        <div
+          class="hero-content"
+          style="max-width: 760px; text-align: left; margin-left: 5vw"
+        >
+          <h1 class="hero-title">Discover Your Next Adventure</h1>
+          <p class="hero-subtitle">
+            Explore breathtaking destinations and create unforgettable memories
+            with our expertly curated tours
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary">Explore Tours</button>
+            <button class="btn btn-secondary">Watch Video</button>
+          </div>
+        </div>
+
+        <!-- Background is now on the section; hide/remove this image block -->
+        <div class="hero-image" style="display: none"></div>
+      </section>
+
+      <!-- Search Section -->
+      <section class="search-section">
+        <div class="container">
+          <div class="search-form">
+            <div class="search-field">
+              <label for="destination">Destination</label>
+              <input
+                type="text"
+                id="destination"
+                placeholder="Where do you want to go?"
+              />
+            </div>
+            <div class="search-field">
+              <label for="dates">Dates</label>
+              <input type="date" id="dates" />
+            </div>
+            <div class="search-field">
+              <label for="guests">Guests</label>
+              <select id="guests">
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4+ Guests</option>
+              </select>
+            </div>
+            <button class="btn btn-search">
+              <i class="fas fa-search"></i>
+              Search
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Destinations Section -->
+      <section id="destinations" class="destinations">
+        <div class="container">
+          <div class="section-header">
+            <h2>Popular Destinations</h2>
+            <p>Discover the world's most amazing places</p>
+          </div>
+          <div class="destinations-grid">
+            <div class="destination-card" style="cursor: pointer">
+              <div class="destination-image">
+                <img src="public/images/Bali.jpg" alt="Bali, Indonesia" />
+              </div>
+              <div class="destination-info">
+                <h3>Bali, Indonesia</h3>
+                <p>Tropical paradise with stunning beaches and rich culture</p>
+                <div class="destination-meta">
+                  <span class="price">From $899</span>
+                  <span class="duration">7 days</span>
+                </div>
+              </div>
+            </div>
+            <div class="destination-card" style="cursor: pointer">
+              <div class="destination-image">
+                <img src="./public/images/tokyo.jpeg" alt="" />
+              </div>
+              <div class="destination-info">
+                <h3>Tokyo, Japan</h3>
+                <p>Modern metropolis blending tradition and innovation</p>
+                <div class="destination-meta">
+                  <span class="price">From $1299</span>
+                  <span class="duration">5 days</span>
+                </div>
+              </div>
+            </div>
+            <div class="destination-card" style="cursor: pointer">
+              <div class="destination-image">
+                <img src="./public/images/Santorini.jpg" alt="" />
+              </div>
+              <div class="destination-info">
+                <h3>Santorini, Greece</h3>
+                <p>Breathtaking sunsets and white-washed architecture</p>
+                <div class="destination-meta">
+                  <span class="price">From $1099</span>
+                  <span class="duration">6 days</span>
+                </div>
+              </div>
+            </div>
+            <div class="destination-card" style="cursor: pointer">
+              <div class="destination-image">
+                <img src="./public/images/peru.webp" alt="" />
+              </div>
+              <div class="destination-info">
+                <h3>Machu Picchu, Peru</h3>
+                <p>Ancient Incan citadel high in the Andes Mountains</p>
+                <div class="destination-meta">
+                  <span class="price">From $1499</span>
+                  <span class="duration">8 days</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tours Section -->
+      <section id="tours" class="tours">
+        <div class="container">
+          <div class="section-header">
+            <h2>Featured Tours</h2>
+            <p>Handpicked adventures for every type of traveler</p>
+          </div>
+          <div class="tours-grid">
+            <div class="tour-card" style="cursor: pointer">
+              <div class="tour-image">
+                <!-- <div class="image-placeholder">
+                  <i class="fas fa-hiking"></i>
+                </div> -->
+                <img src="./public/images/Himalayan.webp" alt="" />
+                <div class="tour-badge">Adventure</div>
+              </div>
+              <div class="tour-info">
+                <h3>Himalayan Trek</h3>
+                <p>
+                  Challenge yourself with a breathtaking journey through the
+                  world's highest mountains
+                </p>
+                <div class="tour-features">
+                  <span><i class="fas fa-users"></i> Max 12 people</span>
+                  <span><i class="fas fa-star"></i> 4.9 rating</span>
+                  <span><i class="fas fa-clock"></i> 14 days</span>
+                </div>
+                <div class="tour-price">
+                  <span class="price">$2,499</span>
+                  <button class="btn btn-book">Book Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="tour-card" style="cursor: pointer">
+              <div class="tour-image">
+                <img src="./public/images/cruise.jpg" alt="" />
+                <div class="tour-badge">Luxury</div>
+              </div>
+              <div class="tour-info">
+                <h3>Mediterranean Cruise</h3>
+                <p>
+                  Sail through crystal-clear waters and visit historic
+                  Mediterranean ports
+                </p>
+                <div class="tour-features">
+                  <span><i class="fas fa-users"></i> Max 200 people</span>
+                  <span><i class="fas fa-star"></i> 4.8 rating</span>
+                  <span><i class="fas fa-clock"></i> 10 days</span>
+                </div>
+                <div class="tour-price">
+                  <span class="price">$3,299</span>
+                  <button class="btn btn-book">Book Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="tour-card" style="cursor: pointer">
+              <div class="tour-image">
+                <img src="./public/images/amazon.jpg" alt="" />
+                <div class="tour-badge">Nature</div>
+              </div>
+              <div class="tour-info">
+                <h3>Amazon Rainforest</h3>
+                <p>
+                  Explore the world's largest tropical rainforest and its
+                  incredible biodiversity
+                </p>
+                <div class="tour-features">
+                  <span><i class="fas fa-users"></i> Max 8 people</span>
+                  <span><i class="fas fa-star"></i> 4.7 rating</span>
+                  <span><i class="fas fa-clock"></i> 9 days</span>
+                </div>
+                <div class="tour-price">
+                  <span class="price">$1,899</span>
+                  <button class="btn btn-book">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-text">
+              <h2>Why Choose Wanderlust Tours?</h2>
+              <p>
+                With over 15 years of experience in creating unforgettable
+                travel experiences, we specialize in crafting personalized
+                journeys that exceed your expectations.
+              </p>
+              <div class="about-features">
+                <div class="feature">
+                  <i class="fas fa-award"></i>
+                  <div>
+                    <h4>Award-Winning Service</h4>
+                    <p>Recognized for excellence in travel services</p>
+                  </div>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-users"></i>
+                  <div>
+                    <h4>Expert Guides</h4>
+                    <p>Professional local guides with deep knowledge</p>
+                  </div>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-shield-alt"></i>
+                  <div>
+                    <h4>Safe & Secure</h4>
+                    <p>Your safety is our top priority</p>
+                  </div>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-heart"></i>
+                  <div>
+                    <h4>Personalized Experience</h4>
+                    <p>Tailored tours to match your interests</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about-image">
+              <img src="./public/images/about.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2>Get in Touch</h2>
+            <p>Ready to start your adventure? Contact us today!</p>
+          </div>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Address</h4>
+                  <p>123 Travel Street, Adventure City, AC 12345</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>info@wanderlusttours.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Hours</h4>
+                  <p>Mon-Fri: 9AM-6PM<br />Sat-Sun: 10AM-4PM</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form">
+              <form id="contactForm">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input type="tel" id="phone" placeholder="Your Phone" />
+                </div>
+                <div class="form-group">
+                  <select id="subject" required>
+                    <option value="">Select Subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="booking">Booking Question</option>
+                    <option value="custom">Custom Tour Request</option>
+                    <option value="support">Support</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea
+                    id="message"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3>Wanderlust Tours</h3>
+              <p>
+                Creating unforgettable travel experiences since 2008. Explore
+                the world with confidence and discover your next adventure.
+              </p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="#">Custom Tours</a></li>
+                <li><a href="#">Group Travel</a></li>
+                <li><a href="#">Adventure Tours</a></li>
+                <li><a href="#">Luxury Travel</a></li>
+                <li><a href="#">Corporate Travel</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Support</h4>
+              <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Travel Insurance</a></li>
+                <li><a href="#">Cancellation Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 Wanderlust Tours. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

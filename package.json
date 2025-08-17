@@ -1,0 +1,17 @@
+{
+  "name": "wanderlust-tours",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A modern tour and travel website built with Vite and vanilla JavaScript",
+  "keywords": ["travel", "tours", "destinations", "booking", "vite", "javascript"],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite preview --port 3000"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}
