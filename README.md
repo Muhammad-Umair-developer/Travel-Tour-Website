@@ -229,4 +229,4 @@ This project is for educational and demonstration purposes. Feel free to use as 
 
 ---
 
-**Built with ❤️ using Vite and vanilla JavaScript**
+**Built with ❤️ by Muhammad Umair**
